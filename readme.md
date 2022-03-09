@@ -134,14 +134,14 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Email: [hello@aqua.network](mailto:hello@aqua.network)
-Telegram chat: [@aquarius_HOME](https://t.me/aquarius_HOME)
-Telegram news: [@aqua_token](https://t.me/aqua_token)
-Twitter: [@aqua_token](https://twitter.com/aqua_token)
-GitHub: [@AquaToken](https://github.com/AquaToken)
-Discord: [@Aquarius](https://discord.gg/sgzFscHp4C)
-Reddit: [@AquariusAqua](https://www.reddit.com/r/AquariusAqua/)
-Medium: [@aquarius-aqua](https://medium.com/aquarius-aqua)
+Email: [hello@aqua.network](mailto:hello@aqua.network)  
+Telegram chat: [@aquarius_HOME](https://t.me/aquarius_HOME)  
+Telegram news: [@aqua_token](https://t.me/aqua_token)  
+Twitter: [@aqua_token](https://twitter.com/aqua_token)  
+GitHub: [@AquaToken](https://github.com/AquaToken)  
+Discord: [@Aquarius](https://discord.gg/sgzFscHp4C)  
+Reddit: [@AquariusAqua](https://www.reddit.com/r/AquariusAqua/)  
+Medium: [@aquarius-aqua](https://medium.com/aquarius-aqua)  
 
 Project Link: [https://github.com/AquaToken/aqua-network-website](https://github.com/AquaToken/aqua-network-website)
 
