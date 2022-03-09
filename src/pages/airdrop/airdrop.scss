@@ -1,0 +1,17 @@
+@import "../../common/styles/reset";
+@import "../../common/styles/common-styles";
+
+@import "../../common/styles/fonts-import";
+@import "../../components/header-component/header";
+@import "../../components/footer-component/footer";
+@import "../../components/get-token-popup/get-token-popup";
+
+@import "main-block/main-block";
+
+.airdrop-link {
+    font-weight: 700;
+}
+
+footer {
+    margin-top: 10rem;
+}

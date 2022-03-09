@@ -1,0 +1,286 @@
+@import "../../../components/socials/socials";
+section.main-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    background-color: #FAFAFB;
+    padding-top: 25rem;
+    padding-bottom: 16rem;
+
+    h1 {
+        font-size: 8rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 9.4rem;
+        letter-spacing: 0;
+        color: #23024D;
+    }
+
+    .description {
+        margin: 3.2rem 0 10.2rem;
+        max-width: 82rem;
+        padding: 0 1rem;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3.2rem;
+        letter-spacing: 0;
+        text-align: center;
+        color: #4D4F68;
+    }
+
+    .cards {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        position: relative;
+        width: 58rem;
+        min-height: 37rem;
+        padding: 6rem;
+        background: #FFFFFF;
+        border-radius: 0.5rem;
+
+        &:first-child {
+            margin-right: 6rem;
+            box-shadow: 0 2rem 3rem rgba(0, 6, 54, 0.06);
+            .text {
+                max-width: initial;
+            }
+        }
+
+        .heading {
+            font-size: 3.6rem;
+            font-weight: 400;
+            line-height: 4.2rem;
+            letter-spacing: 0;
+            margin-bottom: 0.4rem;
+            color: #23024D;
+        }
+
+        .text {
+            max-width: 36.6rem;
+            margin: 2.4rem 0;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.9rem;
+            letter-spacing: 0;
+            color: #4D4F68;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.8rem;
+            color: #872AB0;
+
+            svg {
+                margin-left: 0.8rem;
+            }
+        }
+
+        .label {
+            display: flex;
+            align-items: center;
+            width: min-content;
+            padding: 0.7rem 0.9rem 0.7rem 0.7rem;
+            background-color: #8620B9;
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.4rem;
+            color: #ffffff;
+            white-space: nowrap;
+
+            img {
+                width: 1.2rem;
+                height: 1.6rem;
+                margin-right: 0.4rem;
+            }
+        }
+
+        .phases {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 3.2rem;
+
+            span {
+                font-weight: 700;
+                margin-right: 0.5rem;
+            }
+
+            img {
+                width: 1.5rem;
+                height: 1.9rem;
+                margin-right: 0.6rem;
+            }
+        }
+    }
+}
+
+.socials-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    min-height: 70rem;
+    max-height: 102rem;
+    .social-links {
+        position: absolute;
+        justify-content: flex-end;
+        bottom: 6.5%;
+        height: 100%;
+        left: 0;
+        flex-direction: column;
+        width: 2rem;
+        padding: 0 4rem 9%;
+        z-index: 20;
+
+        a {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1370px) {
+    section.main-block {
+
+        h1 {
+            font-size: 7rem;
+        }
+
+        .description {
+            max-width: 73rem;
+            font-size: 1.6rem;
+        }
+        .card {
+            width: 46rem;
+            min-height: 32rem;
+            padding: 4rem;
+
+            &:first-child {
+                margin-right: 4rem;
+            }
+
+            .text {
+                max-width: 32.6rem;
+                font-size: 1.4rem;
+            }
+
+            .heading {
+                font-size: 3.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    section.main-block {
+        h1 {
+            font-size: 4.5rem;
+        }
+
+        .description {
+            max-width: 73rem;
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+
+            margin: 1.5rem 0 10.2rem;
+        }
+        .card {
+            width: 37rem;
+            min-height: 27rem;
+            padding: 2.5rem;
+
+            &:first-child {
+                margin-right: 2.5rem;
+            }
+
+            .text {
+                max-width: 22rem;
+                font-size: 1.4rem;
+                line-height: 2.5rem;
+            }
+
+            .heading {
+                font-size: 2.9rem;
+                line-height: 3.3rem;
+            }
+            .phases {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .social-links {
+        display: none;
+    }
+    section.main-block {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section.main-block {
+        padding-top: 11rem;
+        h1 {
+            font-size: 2.4rem;
+            line-height: 2.5rem;
+        }
+        .description {
+            max-width: 50rem;
+            margin: 1.5rem 0 4.2rem;
+        }
+
+        .cards {
+            flex-direction: column;
+            padding: 0 1rem;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 39rem;
+            min-height: 27rem;
+            padding: 2.5rem;
+
+            &:first-child {
+                margin-right: 0;
+                margin-bottom: 1.6rem;
+            }
+
+            .text {
+                margin: 0.4rem 0;
+                max-width: 29rem;
+                font-size: 1.4rem;
+                line-height: 2.5rem;
+            }
+
+            .heading {
+                font-size: 2.9rem;
+                line-height: 3.3rem;
+            }
+            .phases {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

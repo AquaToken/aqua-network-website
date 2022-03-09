@@ -1,0 +1,35 @@
+@import "../../common/styles/reset";
+@import "../../common/styles/common-styles";
+
+@import "../../common/styles/fonts-import";
+@import "../../components/header-component/header";
+@import "../../components/footer-component/footer";
+@import "../../components/stay-in-touch/stay-in-touch";
+@import "../../components/subscribe/subscribe";
+@import "../../components/get-token-popup/get-token-popup";
+@import "../../components/faq/faq";
+
+@import "total-reward/total-reward";
+@import "divided-reward/divided-reward";
+@import "pairs-table/pairs-table";
+
+.reward-link {
+    font-weight: 700;
+}
+
+footer {
+    margin-top: 6rem;
+    padding-top: 2.4rem;
+}
+
+@media screen and (max-width: 800px) {
+    footer {
+        margin-top: 6rem;
+        padding-top: 2.4rem;
+        background-color: white;
+    }
+}
+
+section.stay-in-touch {
+    padding-top: 10rem;
+}

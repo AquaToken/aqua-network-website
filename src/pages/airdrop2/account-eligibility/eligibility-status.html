@@ -1,0 +1,30 @@
+<div class="status {{ containerClass }}">
+   <div class="account-status">
+      <div class="account-info">
+          <div id="ident-icon" class="ident-icon">
+              <img src="{{ identIcon }}" alt="identicon" />
+          </div>
+          <div>
+              <div class="federation">{{ federation }}</div>
+              <div class="public-key">{{ shortKey }}</div>
+          </div>
+      </div>
+
+       {{ status }}
+   </div>
+
+
+    <a target="_blank" href="https://stellar.expert/explorer/public/account/{{ key }}">
+        View my account details
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.6464 5L13.6464 7L14 7.35355L13.6464 7.70711L11.6464 9.70711L10.9393 9L12.0858 7.85355H0.292893V6.85355H12.0858L10.9393 5.70711L11.6464 5Z"
+                fill="currentColor"
+            />
+        </svg>
+    </a>
+</div>
+
+

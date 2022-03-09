@@ -1,0 +1,264 @@
+@import "reward-status/reward-status";
+@import "snapshot-holdings/snapshot-holdings";
+section.account-eligibility {
+    padding: 0 1.6rem;
+    &.hidden {
+        display: none;
+    }
+
+    .eligibility {
+        padding: 5rem 4rem 3.5rem;
+        background: #FFFFFF;
+        box-shadow: 0 2rem 3rem rgba(0, 6, 54, 0.06);
+        border-radius: 0.5rem;
+        max-width: 78rem;
+        margin: 3rem auto;
+    }
+
+    &.loading-in-process {
+        .status:not(.status-loading) {
+            display: none;
+        }
+        .status.status-loading {
+            display: flex;
+        }
+    }
+
+    h4 {
+        font-size: 3.5rem;
+        line-height: 4.1rem;
+        color: #23024d;
+        margin-bottom: 2.4rem;
+    }
+
+    .status.status-loading {
+        display: none;
+        min-height: 15rem;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 3rem;
+            height: 3rem;
+        }
+        #color {
+            stop-color: #872AB0;
+        }
+
+        circle {
+            stroke: rgba(135, 42, 176, 0.2);
+        }
+
+        #loader {
+            transform-origin: center;
+            animation: loading 1.4s infinite linear;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+    }
+
+    .status {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 3rem 2rem;
+        background: #fafafb;
+        border-radius: 5px;
+    }
+    .status-data {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ident-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        margin-right: 0.8rem;
+        background: #FFFFFF;
+        box-shadow: 0 2rem 3rem rgba(0, 6, 54, 0.06);
+        border-radius: 1rem;
+        padding: 0.8rem;
+        img {
+            width: 100%;
+            height: 100%;
+            image-rendering: pixelated;
+        }
+    }
+
+    .account-status {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #E8E8ED;
+
+        .account-info {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+
+    .federation {
+        font-family: Roboto;
+        font-size: 1.6rem;
+        line-height: 2.9rem;
+        letter-spacing: 0;
+        color: #000427;
+    }
+
+    .public-key {
+        font-family: Roboto;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2rem;
+        color: #6B6C83;
+    }
+
+    .eligibility-status {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        padding: 0 1.6rem 0 0.8rem;
+        background: linear-gradient(300.06deg, #3D075C -19.81%, #8620B9 141.52%);
+        border-radius: 45px;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: #FFFFFF;
+        svg {
+            margin-right: 1.1rem;
+        }
+        span {
+
+        }
+    }
+    .eligibility-status.not-eligible {
+        background: #FF3461;
+        &.hidden {
+            display: none;
+        }
+        &.hidden ~ .status-created-date {
+            margin-top: 2.7rem;
+        }
+    }
+    .status-created-date {
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: normal;
+        line-height: 1.9rem;
+        color: #000636;
+    }
+
+    a.locker-link {
+        margin-top: 3.2rem;
+        &:hover button {
+            background: #23024D;
+        }
+    }
+
+    button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 5.7rem;
+        border: none;
+        background: #872AB0;
+        border-radius: 0.5rem;
+        font-size: 1.6rem;
+        line-height: 2.9rem;
+        color: #FFFFFF;
+        cursor: pointer;
+        transition: 0.2s;
+
+        span.highlight {
+            margin-right: 0.7rem;
+            font-weight: 700;
+        }
+
+        img {
+            width: 1.4rem;
+            height: 2.1rem;
+            margin-right: 1.2rem;
+        }
+
+        svg {
+            margin-left: 0.8rem;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        max-width: 40rem;
+        margin: 3rem auto;
+        .eligibility {
+            background: transparent;
+            box-shadow: none;
+            padding: 5rem 0 2.5rem;
+            h4 {
+                font-size: 2.9rem;
+            }
+        }
+        .status:not(.error) .account-status {
+            display: block;
+        }
+        .eligibility-status {
+            margin-top: 1.5rem;
+            width: min-content;
+            white-space: nowrap;
+        }
+    }
+
+
+    a {
+        display: flex;
+        align-items: center;
+        margin-top: 1.7rem;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        color: #872AB0;
+        cursor: pointer;
+        text-decoration: none;
+        svg {
+            margin-left: 1rem;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+
+    .status.error {
+        .public-key,
+        .federation,
+        a { display: none; }
+
+        .ident-icon img {
+            width: 22px;
+            height: 22px;
+        }
+        .account-status {
+            padding: 0 0 1.5rem;
+            border-bottom: none;
+            flex-direction: column;
+        }
+    }
+
+    .status.without-federation .federation {
+        display: none;
+    }
+}

@@ -1,0 +1,37 @@
+@import "../../common/styles/reset";
+@import "../../common/styles/common-styles";
+
+.main-screen {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 800px), (max-height: 400px) {
+    .main-screen {
+        height: auto;
+    }
+}
+
+.content-title {
+    grid-area: title;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: #23024D;
+    align-self: center;
+}
+
+@import "../../common/styles/fonts-import";
+
+@import "../../components/header-component/header";
+@import "main-block-component/main-block";
+@import "from-developers/from-developers";
+@import "about/about";
+@import "../../components/subscribe/subscribe";
+@import "airdrop/airdrop";
+@import "roadmap/roadmap";
+@import "../../components/stay-in-touch/stay-in-touch";
+@import "../../components/footer-component/footer";
+@import "../../components/socials/socials";
+@import "../../components/get-token-popup/get-token-popup";

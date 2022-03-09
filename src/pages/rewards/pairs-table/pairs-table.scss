@@ -1,0 +1,350 @@
+section.pairs-table {
+    position: relative;
+    margin: 0 auto;
+    font-family: Roboto;
+    padding-top: 1rem;
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 4.2rem;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+        line-height: 4.1rem;
+        color: #23024D;
+    }
+
+    header .description {
+        display: flex;
+        position: relative;
+        align-items: center;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: #6B6C83;
+
+        svg {
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+
+        svg:hover ~ .tooltip {
+            display: block;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: calc(100% + 1.2rem);
+            width: 22.6rem;
+            background: #8620B9;
+            border-radius: 0.5rem;
+            padding: 1.7rem 2rem;
+            margin-right: -1.4rem;
+            z-index: 10;
+            color: #FFFFFF;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                right: 1.6rem;
+                border: 0.6rem solid transparent;
+                border-bottom-color: #8620B9;
+            }
+        }
+    }
+
+    .table {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 20% 20% 20%;
+
+        .mobile-data {
+            display: none;
+        }
+
+        .heading {
+            padding: 1.5rem 0;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2rem;
+            letter-spacing: 0;
+            color: #6B6C83;
+        }
+
+        .heading.sortable {
+            cursor: pointer;
+            padding-right: 2rem;
+            background: url("/assets/img/sort.svg") no-repeat right center;
+            &.asc {
+                color: #000636;
+                background: url("/assets/img/sort-asc.svg") no-repeat right center;
+            }
+            &.desc {
+                color: #000636;
+                background: url("/assets/img/sort-desc.svg") no-repeat right center;
+            }
+            &:hover {
+                color: #000636;
+            }
+        }
+
+        div {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            &.left {
+                justify-content: flex-start;
+            }
+        }
+
+        .cell {
+            display: flex;
+            align-items: center;
+            height: 9.6rem;
+
+            img.explore {
+                width: 1.6rem;
+                height: 1.6rem;
+                margin-left: 0.8rem;
+            }
+        }
+
+        .additional-text {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2rem;
+            letter-spacing: 0;
+            color: #6B6C83;
+        }
+
+        .text {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.8rem;
+            letter-spacing: 0;
+            color: #000636;
+        }
+
+        .pair {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+
+            .icons {
+                flex: none;
+                margin-right: 1.6rem;
+            }
+
+            img {
+                width: 3.2rem;
+                height: 3.2rem;
+                border-radius: 50%;
+                overflow: hidden;
+                box-sizing: content-box;
+                background-color: white;
+            }
+
+            img:first-child {
+                border: 3px solid #ffffff;
+                z-index: 10;
+            }
+
+            img:not(:first-child) {
+                margin-left: -1.1rem;
+            }
+
+            .data {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    .error {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        svg {
+            margin-bottom: 1.5rem;
+        }
+        a {
+            margin-top: 1rem;
+        }
+    }
+
+    .table-footer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3.2rem;
+        border-top: 1px solid rgba(35, 2, 77, 0.1);
+
+        .count {
+            position: absolute;
+            left: 0;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0;
+            color: #6B6C83;
+            span {
+                color: #000636;
+            }
+        }
+
+        .pages-switcher {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .pages {
+            display: flex;
+            align-items: center;
+            font-family: Roboto;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2rem;
+            letter-spacing: 0;
+            color: #6B6C83;
+            cursor: default;
+            user-select: none;
+
+            .active {
+                color: #000636;
+            }
+            div:not(:first-child) {
+                margin-left: 2.4rem;
+            }
+            div {
+                cursor: pointer;
+            }
+        }
+        svg {
+            cursor: pointer;
+            margin-right: 2.8rem;
+            path {
+                fill: #6B6C83;
+            }
+            &:hover path {
+                fill: #000000;
+            }
+            &:active {
+                transform: scale(1.2);
+            }
+            &.right {
+                margin-right: 0;
+                margin-left: 2.8rem;
+                transform: rotate(180deg);
+            }
+            &.right:active {
+                transform: rotate(180deg) scale(1.2);
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        header {
+            display: block;
+            width: 100%;
+            max-width: 42rem;
+            margin: 4rem auto 1.6rem;
+        }
+        h3 {
+            font-size: 2.9rem;
+            line-height: 3.4rem;
+            margin-bottom: 9px;
+        }
+        header .description {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            color: #6B6C83;
+
+            svg {
+                margin-left: 1rem;
+            }
+
+            .tooltip:after {
+                content: none;
+            }
+        }
+        .table > div:not(.pair) {
+            display: none;
+        }
+        .table {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .cell {
+                height: initial;
+            }
+            .pair {
+                width: 100%;
+                max-width: 43rem;
+                background: #FFFFFF;
+                border-radius: 5px;
+                padding: 2.5rem 1.6rem;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 1.6rem;
+            }
+            .start {
+                justify-content: flex-start;
+            }
+            .data .text {
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 2.8rem;
+                letter-spacing: 0;
+                margin: 0.7rem 0 0.4rem;
+            }
+            .data .additional-text {
+                font-size: 1.2rem;
+                margin-bottom: 3.2rem;
+            }
+            .mobile-data {
+                display: grid;
+                grid-template-columns: min-content auto;
+                grid-column-gap: 1rem;
+                grid-row-gap: 1.6rem;
+                width: 100%;
+                justify-content: initial;
+                white-space: nowrap;
+
+                .text {
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+
+        .table-footer {
+            border-top: none;
+            .count {
+                display: none;
+            }
+        }
+    }
+}

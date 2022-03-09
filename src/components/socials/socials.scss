@@ -1,0 +1,29 @@
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20rem;
+    margin-top: 2rem;
+
+    a:hover svg path:not(.white) {
+        fill: #872AB0;
+    }
+
+    .stay-in-touch {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: #B3B4C3;
+        white-space: nowrap;
+        transform: rotate(-90deg);
+        margin-top: 8.5rem;
+
+        .line {
+            width: 6.7rem;
+            height: 1px;
+            background-color: #B3B4C3;
+            margin-left: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/rewards"
+  to = "/rewards.html"
+  status = 200
+  force = false

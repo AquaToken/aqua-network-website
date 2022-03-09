@@ -1,0 +1,55 @@
+<section class="pairs-table centered-block">
+    <header>
+        <h3>Market Rewards</h3>
+        <div class="description">
+            <span id="last-updated"></span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="5.5" stroke="#872AB0"/>
+                <path d="M8 11V7" stroke="#872AB0"/>
+                <path d="M8 6V5" stroke="#872AB0"/>
+            </svg>
+            <div class="tooltip">Market rewards are updated once a day at a random time.</div>
+        </div>
+    </header>
+    <div class="table" id="table">
+        <div class="heading left">Market</div>
+        <div class="heading sortable" data-sort="daily_sdex_reward">SDEX daily reward</div>
+        <div class="heading sortable" data-sort="daily_amm_reward">AMM daily reward</div>
+        <div class="heading sortable" data-sort="daily_total_reward">Total daily reward</div>
+    </div>
+
+    <div class="error hidden" id="error">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M22 11C22 17.0751 17.0751 22 11 22C4.92487 22 0 17.0751 0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11Z"
+                fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20ZM11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22Z"
+                  fill="#FF3461"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12V6H12V12H10Z" fill="#FF3461"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 16V13H12V16H10Z" fill="#FF3461"/>
+        </svg>
+
+        Can not load Markets data. Request failed or provided params are invalid.
+        <a href="/rewards">Retry</a>
+    </div>
+
+    <div class="spinner hidden" id="loading"></div>
+
+    <div class="table-footer" id="table-footer">
+        <div class="count"><span id="range"></span> out of <span id="count"></span> pairs</div>
+        <div class="pages-switcher">
+            <svg data-page-change="-1" width="8" height="14" viewBox="0 0 8 14" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.35355 8.06062L6.64645 13.3535L7.35355 12.6464L2.06066 7.35352C1.8654 7.15825 1.8654 6.84167 2.06066 6.64641L7.35355 1.35352L6.64645 0.646408L1.35355 5.9393C0.767768 6.52509 0.767768 7.47484 1.35355 8.06062Z"/>
+            </svg>
+            <div class="pages" id="pages"></div>
+            <svg data-page-change="1" class="right" width="8" height="14" viewBox="0 0 8 14" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.35355 8.06062L6.64645 13.3535L7.35355 12.6464L2.06066 7.35352C1.8654 7.15825 1.8654 6.84167 2.06066 6.64641L7.35355 1.35352L6.64645 0.646408L1.35355 5.9393C0.767768 6.52509 0.767768 7.47484 1.35355 8.06062Z"/>
+            </svg>
+        </div>
+    </div>
+</section>

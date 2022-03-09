@@ -1,0 +1,53 @@
+{
+  "name": "aquarius-landing",
+  "version": "1.0.0",
+  "description": "Aquarius Landing",
+  "main": "index.html",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-angularjs-annotate": "^0.9.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "browser-sync": "^2.26.14",
+    "del": "^3.0.0",
+    "gulp": "gulpjs/gulp",
+    "gulp-copy": "^1.1.0",
+    "gulp-hash-filename": "^1.2.0",
+    "gulp-if": "^2.0.2",
+    "gulp-jscs": "^4.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-less": "^3.5.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-preprocess": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "html-loader": "^0.5.5",
+    "jscs-loader": "^0.3.0",
+    "jshint": "^2.9.5",
+    "jshint-loader": "^0.8.4",
+    "json-loader": "^0.5.7",
+    "less-plugin-clean-css": "^1.5.1",
+    "lottie-web": "^5.3.4",
+    "path": "^0.12.7",
+    "stellar-identicon-js": "^1.0.0",
+    "through2": "^2.0.3",
+    "vinyl-named": "^1.1.0",
+    "web-animations-js": "^2.3.1",
+    "webpack-stream": "^4.0.3",
+    "yargs": "^11.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=prod gulp build",
+    "start": "./node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/razortheory/aqua-landing/"
+  },
+  "author": "",
+  "license": "ISC"
+}

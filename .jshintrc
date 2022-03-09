@@ -1,0 +1,23 @@
+{
+  "maxdepth": 3,
+  "node": true,
+  "browser": true,
+  "esnext": true,
+  "camelcase": false,
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": false,
+  "noarg": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "newcap": false,
+  "laxbreak": true,
+  "validthis": true,
+  "globals": {
+    "Headers": true,
+    "FontFace": true,
+    "bodymovin": true
+  }
+}

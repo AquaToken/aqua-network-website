@@ -1,0 +1,14 @@
+[
+    {
+        "answer": "An AQUA trustline needs to be added to the user's Stellar wallet. Trustlines allow a user to receive & hold specific Stellar assets within their wallets. Once a user has a Stellar wallet and an AQUA trustline enabled they can start earning rewards through SDEX market making or AMM liquidity providing.",
+        "question": "How can I get involved with AQUA rewards?"
+    },
+    {
+        "answer": "SDEX rewards are earned through market making on the above markets on Stellar Decentralized Exchange (SDEX). Market making happens through the creation of buy & sell offers, with orders sitting on the order books ready for other users to take at a later time.\r\nFor SDEX market making you can use platforms like LOBSTR, StellarX, StellarTerm or market-making bots like Kelp bot.",
+        "question": "How do I participate in earning SDEX daily rewards?"
+    },
+    {
+        "answer": "AMM rewards are earned through liquidity providing on the above markets through Stellar AMMs. These rewards are distributed based on a user's contribution to AMM pools.\r\nYou can get access to AMMs on Stellar using products like StellarX, Stellarport, or Lumenswap.",
+        "question": "How do I participate in earning AMM daily reward?"
+    }
+]

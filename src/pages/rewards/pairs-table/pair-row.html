@@ -1,0 +1,33 @@
+<div class="cell pair left">
+    <div class="icons">
+        <img src="{{ base.image }}" onerror="this.src='/assets/img/asset-unknown-logo.svg'">
+        <img src="{{ counter.image }}" onerror="this.src='/assets/img/asset-unknown-logo.svg'">
+    </div>
+    <div class="data">
+        <div class="text">{{ base.code }} / {{ counter.code }}</div>
+        <div class="additional-text">{{ base.name }} ({{ base.home_domain }}) · {{ counter.name }} ({{ counter.home_domain }})</div>
+    </div>
+    <div class="mobile-data">
+        <div class="additional-text start">SDEX daily reward</div>
+        <div class="additional-text">
+            {{ sdex.reward }} AQUA
+            <a href="https://stellarterm.com/exchange/{{ sdex.link }}" target="_blank"><img class="explore" src="./assets/img/explore.svg"></a>
+        </div>
+        <div class="additional-text start">AMM daily reward</div>
+        <div class="additional-text">
+            {{ amm.reward }} AQUA
+            <a href="https://www.stellarx.com/amm/liquidity/{{ amm.link }}" target="_blank"><img class="explore" src="./assets/img/explore.svg"></a>
+        </div>
+        <div class="text start">Total daily reward</div>
+        <div class="text">{{ total }} AQUA</div>
+    </div>
+</div>
+<div class="cell additional-text">
+    {{ sdex.reward }} AQUA
+    <a href="https://stellarterm.com/exchange/{{ sdex.link }}" target="_blank"><img class="explore" src="./assets/img/explore.svg"></a>
+</div>
+<div class="cell additional-text">
+    {{ amm.reward }} AQUA
+    <a href="https://www.stellarx.com/amm/liquidity/{{ amm.link }}" target="_blank"><img class="explore" src="./assets/img/explore.svg"></a>
+</div>
+<div class="cell text">{{ total }} AQUA</div>

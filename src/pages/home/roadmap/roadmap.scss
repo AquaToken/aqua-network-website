@@ -1,0 +1,167 @@
+section.roadmap {
+    padding-top: 16rem;
+    display: flex;
+    justify-content: center;
+    flex: auto;
+    position: relative;
+    min-height: 0;
+    overflow: hidden;
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .controls-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10rem;
+
+        .title {
+            font-size: 3.5rem;
+            line-height: 4.1rem;
+            color: #23024D;
+            margin-bottom: 0.4rem;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 3rem;
+            color: #23024D;
+        }
+
+        .controls {
+            display: flex;
+        }
+
+        .control-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            box-shadow: 0 2rem 3rem rgba(0, 6, 54, 0.06);
+            cursor: pointer;
+            &:hover {
+                color: #872AB0;
+            }
+
+            &:not(:last-child) {
+                margin-right: 1.8rem;
+            }
+        }
+    }
+
+    .slider-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        position: relative;
+
+        .slider-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+        }
+
+
+        .slider {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .slider-progress-pillar {
+            position: absolute;
+            height: 0.1rem;
+            background: linear-gradient(to right, #fff 0%, #E8E8ED 10%, #E8E8ED 90%, #fff 100%);
+            top: 7.8rem;
+            left: -10rem;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .slider-progress-filler {
+            position: absolute;
+            height: 0.1rem;
+            background: linear-gradient(to right, #fff 0%, #8620B9 50%, #8620B9 100%);
+            top: 7.8rem;
+            left: -10rem;
+            transform: translateZ(2px);
+            transition: all 0.5s ease-in-out;
+
+        }
+
+        .slide {
+            display: flex;
+            flex-direction: column;
+            width: 36rem;
+            min-width: calc(33% - 4rem);
+            transform: translateZ(3px);
+
+            &:not(:last-child) {
+                margin-right: 6rem;
+            }
+        }
+
+        .slide-date {
+            font-size: 16px;
+            line-height: 3rem;
+            color: #D2D3DB;
+            margin-bottom: 3.2rem;
+        }
+
+        .slide-progress {
+            width: 3.2rem;
+            height: 3.2rem;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3.2rem;
+            box-shadow: 0 2rem 3rem rgba(0, 6, 54, 0.06);
+
+            &.active {
+                background: #8620B9;
+            }
+        }
+
+        .slide-title {
+            font-size: 2rem;
+            line-height: 2.3rem;
+            color: #23024D;
+            margin-bottom: 1.6rem;
+        }
+
+        .slide-text {
+            font-size: 1.6rem;
+            line-height: 3rem;
+            color: #4D4F68;
+        }
+
+    }
+
+    @media screen and (max-width: 800px) {
+        .wrapper {
+            //max-width: unset;
+        }
+
+        .controls-block {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 2.7rem;
+        }
+
+        .controls {
+            margin-top: 2rem;
+        }
+
+        .slide {
+            min-width: 100% !important;
+        }
+    }
+}

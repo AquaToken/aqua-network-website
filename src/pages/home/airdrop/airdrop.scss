@@ -1,0 +1,172 @@
+section.airdrop {
+    width: 100%;
+    background-color: #23024D;
+    //background-image: url("/assets/img/starsbg.svg");
+    padding: 10rem 0;
+    display: flex;
+    justify-content: center;
+    flex: auto;
+    position: relative;
+    min-height: 0;
+
+
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .label {
+        display: flex;
+        align-items: center;
+        width: min-content;
+        margin-bottom: 2.4rem;
+        padding: 0.7rem 0.9rem 0.7rem 0.7rem;
+        background-color: #8620B9;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.4rem;
+        color: #ffffff;
+        white-space: nowrap;
+
+        img {
+            width: 1.2rem;
+            height: 1.6rem;
+            margin-right: 0.4rem;
+        }
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 8rem;
+        line-height: 9.4rem;
+        color: #FFFFFF;
+        margin-bottom: 2.4rem;
+    }
+
+    .description {
+        max-width: 67rem;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        color: #FFFFFF;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .airdrops {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 34.8rem;
+
+        .block {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            background: #FFFFFF;
+            box-shadow: 0 2rem 3rem rgba(0, 6, 54, 0.06);
+            border-radius: 0.5rem;
+            padding: 2.4rem 3.3rem;
+        }
+
+        a {
+          width: 100%;
+            color: #000427;
+        }
+
+        a:not(:first-child) {
+            margin-top: 1.6rem;
+        }
+
+        .second {
+            text-align: center;
+            flex-direction: column;
+            padding: 4.4rem 4rem;
+        }
+
+        .data {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1;
+            min-width: 0;
+        }
+
+
+        .second img {
+            height: 6.5rem;
+            margin-bottom: 3.8rem;
+        }
+    }
+
+    .block-title {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 3rem;
+        color: #000427;
+        margin-bottom: 0.8rem;
+    }
+
+    .button {
+        margin-top: 2.8rem;
+        width: 100%;
+        @include app-button(2.6rem 3.8rem, 1.6rem);
+    }
+
+    .phases {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 3.2rem;
+
+        span {
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        img {
+            width: 1.5rem;
+            height: 1.9rem;
+            margin-right: 0.6rem;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .wrapper {
+            flex-direction: column;
+        }
+
+        .description {
+            margin-bottom: 2.7rem;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .airdrop {
+            padding-bottom: 0;
+        }
+
+        .title {
+            font-size: 4rem;
+            line-height: 4.6rem;
+        }
+
+        .description {
+            font-size: 1.4rem;
+            line-height: 2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section.airdrop {
+        //height: 80rem;
+        margin-bottom: 7rem;
+    }
+}

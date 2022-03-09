@@ -1,0 +1,109 @@
+section.divided-rewards {
+    position: relative;
+    height: 20rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: Roboto;
+
+    .spinner {
+        margin: 0.9rem 0 1.5rem;
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        width: 58rem;
+        align-items: flex-start;
+        padding: 6rem 5.8rem;
+        margin-top: -7rem;
+        background: #FFFFFF;
+        box-shadow: 0 2rem 3rem rgba(0, 6, 54, 0.06);
+        border-radius: 0.5rem;
+        &:first-child {
+            margin-right: 6rem;
+        }
+        &:not(.loading) .spinner {
+            display: none;
+        }
+
+        img {
+            width: 3.3rem;
+            height: 3.3rem;
+            margin: 0.4rem 1.6rem 0 0;
+        }
+
+        .amount {
+            font-size: 3.6rem;
+            font-weight: 400;
+            line-height: 4.2rem;
+            letter-spacing: 0;
+            margin-bottom: 0.6rem;
+        }
+
+        .description {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 3.2rem;
+            letter-spacing: 0;
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1250px){
+        .card {
+            width: 40rem;
+            padding: 4rem 3.8rem;
+        }
+    }
+
+    @media screen and (max-width: 900px){
+        .card {
+            width: 35rem;
+            .amount {
+                font-size: 2.6rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px){
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 1.6rem;
+        max-width: 55rem;
+        height: initial;
+
+        .card {
+            width: 100%;
+            max-width: 43rem;
+            margin-bottom: 0.8rem;
+            margin-top: 0;
+            margin-right: 0 !important;
+            img {
+                display: none;
+            }
+            .amount {
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 3rem;
+            }
+            .description {
+                font-size: 1.4rem;
+                line-height: 2.5rem;
+            }
+            & > div {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+}

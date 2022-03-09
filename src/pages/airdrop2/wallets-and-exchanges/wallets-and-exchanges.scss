@@ -1,0 +1,112 @@
+section.wallets-and-exchanges {
+    position: relative;
+    display: grid;
+    padding: 8rem 10rem 11.6rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    grid-template-areas: 'a b' 'c d';
+    grid-column-gap: 6rem;
+    grid-row-gap: 8rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: auto;
+
+    .text.wallets {
+        grid-area: a;
+        justify-self: flex-end;
+    }
+    .icons.wallets { grid-area: b; }
+    .icons.exchanges { grid-area: c; }
+    .text.exchanges { grid-area: d; }
+
+    .text {
+        max-width: 36.6rem;
+        font-size: 1.6rem;
+        line-height: 2.9rem;
+        color: #000427;
+        h4 {
+            font-size: 3.5rem;
+            line-height: 4.1rem;
+            margin-bottom: 1.7rem;
+            color: #23024D;
+        }
+    }
+
+    .medium-link {
+        display: flex;
+        align-items: center;
+        color: #872AB0;
+        &:active {
+            color: #872AB0;
+        }
+    }
+    svg {
+        margin-left: 0.8rem;
+    }
+
+    .icons {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.6rem;
+        grid-row-gap: 1.6rem;
+
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            height: 13rem;
+            background: #FAFAFB;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.07);
+            }
+        }
+        img {
+            max-height: 9rem;
+            max-width: 65%;
+            margin: auto;
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        .icons .icon-container {
+            height: 11rem;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .text {
+            font-size: 1.4rem;
+            line-height: 2.5rem;
+            h4 {
+                font-size: 2.9rem;
+                line-height: 3.3rem;
+            }
+        }
+        .icons .icon-container {
+            height: 10rem;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        grid-template-areas: 'a' 'b' 'd' 'c';
+        grid-row-gap: 3.8rem;
+        grid-template-columns: 1fr;
+        padding: 2.1rem 1.6rem 1.6rem;
+        .icons .icon-container {
+            height: 13rem;
+        }
+
+        .text {
+            justify-self: flex-start !important;
+            max-width: initial;
+        }
+    }
+}

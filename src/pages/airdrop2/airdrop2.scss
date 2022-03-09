@@ -1,0 +1,26 @@
+@import "../../common/styles/reset";
+@import "../../common/styles/common-styles";
+
+@import "../../common/styles/fonts-import";
+@import "../../components/header-component/header";
+@import "../../components/footer-component/footer";
+@import "../../components/stay-in-touch/stay-in-touch";
+@import "../../components/subscribe/subscribe";
+@import "../../components/get-token-popup/get-token-popup";
+@import "../../components/faq/faq";
+
+@import "main-block/main-block";
+@import "conditions/conditions";
+@import "current-stats/current-stats";
+@import "account-eligibility/account-eligibility";
+@import "wallets-and-exchanges/wallets-and-exchanges";
+
+.main-content {
+    @media screen and (max-width: 900px) {
+        background-color: #ffffff;
+    }
+}
+
+.airdrop-link {
+    font-weight: 700;
+}

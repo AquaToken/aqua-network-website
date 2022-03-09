@@ -1,0 +1,169 @@
+section.account-eligibility .status.reward-status {
+    display: block;
+    font-family: Roboto;
+    font-style: normal;
+    letter-spacing: 0;
+    margin-top: 2rem;
+
+    &.without-boost {
+        .result-stat {
+            display: none;
+        }
+        .main-stat {
+            color: #23024D;
+            svg .background {
+                fill: #872AB0;
+            }
+            .boost {
+                display: none;
+            }
+        }
+        svg.arrow {
+            display: none !important;
+        }
+    }
+
+    .title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.8rem;
+        color: #23024D;
+        margin-bottom: 3.2rem;
+    }
+
+    svg:not(.arrow) {
+        height: 4.8rem;
+        width: 4.8rem;
+        margin-right: 1.6rem;
+        .background {
+            fill: #872AB0;
+        }
+    }
+
+    svg.arrow {
+        display: none;
+    }
+
+    .main-stat,
+    .result-stat {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-stat {
+        position: relative;
+        font-size: 3.6rem;
+        line-height: 4.2rem;
+        color: #6B6C83;
+        svg .background {
+            fill: #E8E8ED;
+        }
+        &:after {
+            position: absolute;
+            bottom: -2.6rem;
+            left: 2rem;
+            content: '';
+            background: url('/assets/img/small-arrow.svg') no-repeat center/cover;
+            width: 0.8rem;
+            height: 1.6rem;
+        }
+    }
+
+    &.without-boost .main-stat:after {
+        content: none;
+    }
+
+    .result-stat {
+        font-size: 5.6rem;
+        font-weight: 700;
+        line-height: 6.4rem;
+        color: #23024D;
+        margin-top: 3rem;
+    }
+
+    .boost {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min-content;
+        height: 3.5rem;
+        margin-left: 1.6rem;
+        padding: 0 1.4rem 0 1.2rem;
+        background: #8620B9;
+        border-radius: 5px;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: #FFFFFF;
+        white-space: nowrap;
+        img {
+            margin-right: 1rem;
+        }
+    }
+
+    .divided-reward {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 3.2rem;
+        padding-top: 3.2rem;
+        border-top: 1px dashed #E8E8ED;
+    }
+
+    .reward {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.8rem;
+        color: #23024D;
+        margin-bottom: 0.3rem;
+    }
+    .description {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: #6B6C83;
+    }
+
+    @media screen and (max-width: 800px){
+        .result-stat,
+        .main-stat {
+            display: grid;
+            grid-template-columns: min-content auto;
+            grid-row-gap: 1rem;
+            grid-column-gap: 1.3rem;
+        }
+        .result-stat {
+            margin-top: 1.3rem;
+        }
+        .main-stat,
+        .result-stat {
+            white-space: nowrap;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+        }
+        .main-stat:after {
+            content: none;
+        }
+
+        svg.arrow {
+            display: block;
+            justify-self: center;
+        }
+
+        svg:not(.arrow) {
+            height: 2.4rem;
+            width: 2.4rem;
+            margin-right: 0;
+        }
+        .divided-reward {
+            grid-template-columns: 1fr;
+            grid-row-gap: 3.6rem;
+        }
+
+        .boost {
+            align-self: flex-start;
+            height: 2.5rem;
+            margin-left: 0;
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+    }
+}
