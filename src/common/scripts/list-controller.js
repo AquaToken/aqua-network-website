@@ -1,5 +1,5 @@
 const REWARD_URL = 'https://reward-api.aqua.network/api/rewards/';
-const ASSETS_DATA_URL = 'https://assets.ultrastellar.com/api/v1/assets/';
+const ASSETS_DATA_URL = 'https://assets.aqua.network/api/v1/assets/';
 
 const ASSETS_DATA = new Map([['XLM:', {
     code: 'XLM',
