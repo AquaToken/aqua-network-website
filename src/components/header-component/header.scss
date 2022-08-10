@@ -3,7 +3,7 @@ header.page-header {
     display: flex;
     flex: none;
     width: 100%;
-    height: 11rem;
+    height: 11.2rem;
     left: 0;
     top: 0;
     background-color: #ffffff;
@@ -11,6 +11,7 @@ header.page-header {
 
     .relative {
         position: relative;
+        height: 1.6rem;
     }
 
     .header-content {
@@ -34,11 +35,14 @@ header.page-header {
 
         a {
             font-size: 1.4rem;
+            line-height: 1.6rem;
             color: #23024D;
             text-decoration: none;
             outline: none;
             transition: 0.15s;
             margin-right: 2.4rem;
+            display: inline-block;
+            border: none;
 
             &:last-child {
                 margin-right: 3.2rem;
@@ -46,6 +50,17 @@ header.page-header {
 
             &:hover {
                 color: #872AB0;
+            }
+
+            &::after {
+                content: attr(title);
+                visibility: hidden;
+                overflow: hidden;
+                user-select: none;
+                pointer-events: none;
+                font-weight: 700;
+                height: 0;
+                display: block;
             }
         }
 
@@ -55,7 +70,8 @@ header.page-header {
         }
 
         button {
-            @include app-button(1.5rem 2.8rem, 1.4rem);
+            @include app-button(1.6rem 2.8rem, 1.4rem);
+            width: 12rem;
         }
 
         .menu-toggle, .social-links {
@@ -108,6 +124,10 @@ header.page-header {
             img {
                 height: 3.4rem;
                 z-index: 50;
+            }
+
+            .relative {
+                height: unset;
             }
 
             .menu {
