@@ -110,11 +110,11 @@ export class PairsListController {
                 counter: assetData2,
                 amm: {
                     reward: number.format(dataObject.daily_amm_reward),
-                    link: `${geAMMtAssetPath(assetData1.code, assetData1.issuer)}/${geAMMtAssetPath(assetData2.code, assetData2.issuer)}`,
+                    link: `${getAssetPath(assetData1.code, assetData1.issuer)}/${getAssetPath(assetData2.code, assetData2.issuer)}`,
                 },
                 sdex: {
                     reward: number.format(dataObject.daily_sdex_reward),
-                    link: `${geSDEXtAssetPath(assetData1.code, assetData1.issuer)}/${geSDEXtAssetPath(assetData2.code, assetData2.issuer)}`,
+                    link: `${getAssetPath(assetData1.code, assetData1.issuer)}/${getAssetPath(assetData2.code, assetData2.issuer)}`,
                 },
                 total: number.format(dataObject.daily_total_reward),
             };
@@ -138,12 +138,8 @@ export class PairsListController {
     }
 }
 
-function geAMMtAssetPath(code, issuer) {
+function getAssetPath(code, issuer) {
     return issuer ? `${code}:${issuer}` : 'native';
-}
-
-function geSDEXtAssetPath(code, issuer) {
-    return `${code}-${issuer || 'native'}`;
 }
 
 function getAssetData(code, issuer) {
