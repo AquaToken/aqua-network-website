@@ -21,7 +21,7 @@ const List = new PairsListController();
 // Subscribe on data changes. Data will be loaded on url params changes.
 // After successful response rows containing par data will be rendered
 List.subscribeOnData((data) => {
-    table.querySelectorAll('.cell').forEach((el) => el.remove());
+    table.querySelectorAll('.table-row:not(.header)').forEach((el) => el.remove());
     error.classList.add('hidden');
     spinner.classList.add('hidden');
     if (!data) {
@@ -32,6 +32,13 @@ List.subscribeOnData((data) => {
         const el = document.createElement('div');
         el.innerHTML = data.map((dataObj) => addDataToTemplate(dataObj, pairRowTemplate)).join('');
         table.append(...el.children);
+
+        table.querySelectorAll('[data-link]').forEach((el) => {
+            el.addEventListener('click', () => {
+                const link = `https://vote.aqua.network/market/${el.dataset.link}`;
+                window.open(link, '_self');
+            });
+        });
     }
 });
 // Subscribe on sorting change. Highlight current sorting column

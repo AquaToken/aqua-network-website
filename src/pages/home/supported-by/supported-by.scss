@@ -1,4 +1,4 @@
-section.from-developers {
+section.supported-by {
     display: flex;
     justify-content: center;
     flex: auto;
@@ -34,7 +34,7 @@ section.from-developers {
 }
 
 @media screen and (max-width: 500px) {
-    section.from-developers {
+    section.supported-by {
         .image-block {
             img {
                 height: 1.3rem;
@@ -44,7 +44,7 @@ section.from-developers {
 }
 
 @media screen and (max-width: 800px) {
-    section.from-developers {
+    section.supported-by {
         .wrapper {
             flex-direction: column;
             align-items: flex-start;
@@ -61,7 +61,7 @@ section.from-developers {
 }
 
 @media screen and (max-width: 800px), (max-height: 400px) {
-    section.from-developers {
+    section.supported-by {
         margin-top: 1rem;
     }
 }

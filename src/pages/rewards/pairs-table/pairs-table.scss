@@ -9,6 +9,8 @@ section.pairs-table {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 4.2rem;
+        padding: 0 1rem;
+
     }
 
     h3 {
@@ -61,7 +63,6 @@ section.pairs-table {
     .table {
         position: relative;
         display: grid;
-        grid-template-columns: auto 20% 20% 20%;
 
         .mobile-data {
             display: none;
@@ -74,6 +75,33 @@ section.pairs-table {
             line-height: 2rem;
             letter-spacing: 0;
             color: #6B6C83;
+        }
+
+        .table-row {
+            width: 100%;
+            justify-content: unset;
+            display: grid;
+            grid-template-columns: auto 20% 20% 20%;
+            padding: 0 1rem;
+            border: 0.1rem solid transparent;
+            border-radius: 0.5rem;
+
+            &:not(.header) {
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #FAFAFB;
+                    border: 0.1rem solid #E8E8ED;
+                }
+            }
+
+            .table-cell {
+                flex: 1;
+
+                &:first-child {
+                    flex: 2;
+                }
+            }
         }
 
         .heading.sortable {
@@ -289,13 +317,18 @@ section.pairs-table {
                 content: none;
             }
         }
-        .table > div:not(.pair) {
+        .table-row > div:not(.pair) {
             display: none;
         }
+
         .table {
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            .table-row {
+                grid-template-columns: unset;
+            }
 
             .cell {
                 height: initial;
